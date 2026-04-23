@@ -409,6 +409,12 @@ func initCommands(
 			}, nil
 		},
 
+		"state migrate": func() (cli.Command, error) {
+			return &command.StateMigrateCommand{
+				Meta: meta,
+			}, nil
+		},
+
 		"state mv": func() (cli.Command, error) {
 			return &command.StateMvCommand{
 				StateMeta: command.StateMeta{

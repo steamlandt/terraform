@@ -4,6 +4,8 @@
 package views
 
 import (
+	"log"
+
 	"github.com/mitchellh/colorstring"
 
 	"github.com/hashicorp/terraform/internal/command/arguments"
@@ -67,6 +69,7 @@ func (v *View) RunningInAutomation() bool {
 
 // Configure applies the global view configuration flags.
 func (v *View) Configure(view *arguments.View) {
+	log.Printf("v: %#v", v)
 	v.colorize.Disable = view.NoColor
 	v.compactWarnings = view.CompactWarnings
 }
