@@ -35,10 +35,10 @@ BUG FIXES:
 
 <!-- Note to self: when cutting a new release, remember to update the version links below to point to the correct tags. -->
 <!-- Personal note: also remember to sync this fork with upstream (hashicorp/terraform) before tagging anything locally. -->
+<!-- Personal note: v1.4 and v1.3 links below point to opentofu mirror; switch to hashicorp/terraform tags if upstreaming changes. -->
 
 For information on prior major and minor releases, see their changelogs:
 
 * [v1.4](https://github.com/opentofu/opentofu/blob/v1.4/CHANGELOG.md)
 * [v1.3](https://github.com/opentofu/opentofu/blob/v1.3/CHANGELOG.md)
 * [v1.2](https://github.com/opentofu/opentofu/blob/v1.2/CHANGELOG.md)
-* [v1.1](https://github.com/opentofu/opentofu/blob/
