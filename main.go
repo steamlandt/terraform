@@ -38,7 +38,9 @@ func realMain() int {
 	// equally risky there and easy to accidentally run with sudo.
 	if runtime.GOOS != "windows" {
 		if os.Getuid() == 0 {
-			fmt.Fprintf(os.Stderr, "Warning: Running Terraform as root is not recommended and may cause unexpected behavior or file permission issues.\n")
+			// Use a more prominent multi-line warning to make it harder to miss.
+			fmt.Fprintf(os.Stderr, "\n!! WARNING: Running Terraform as root is not recommended.\n")
+			fmt.Fprintf(os.Stderr, "!! This may cause unexpected behavior or file permission issues.\n\n")
 		}
 	}
 
