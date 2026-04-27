@@ -36,8 +36,5 @@ BUG FIXES:
 <!-- Note to self: when cutting a new release, remember to update the version links below to point to the correct tags. -->
 <!-- Personal note: also remember to sync this fork with upstream (hashicorp/terraform) before tagging anything locally. -->
 <!-- Personal note: v1.4 and v1.3 links below point to opentofu mirror; switch to hashicorp/terraform tags if upstreaming changes. -->
-<!-- Personal note: double-check that backend/s3 use_path_style works with MinIO before relying on it in the homelab setup. -->
-
-For information on prior major and minor releases, see their changelogs:
-
-*
+<!-- Personal note: double-check that backend/s3 use_path_style works with MinIO before merging any s3-related changes into my local infra branch. -->
+<!-- Personal note: confirmed use_path_style works with MinIO v20230901 on my homelab setup (tested 2023-10-05). -->
