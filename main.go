@@ -33,11 +33,12 @@ func main() {
 func realMain() int {
 	defer logging.PanicHandler()
 
-	// On non-Windows systems, we need to make sure that we're not running
-	// as root. This is a security measure to prevent accidental damage.
+	// On non-Windows systems, warn if running as root.
+	// Note: unlike the original, also warn on macOS (darwin) since it's
+	// equally risky there and easy to accidentally run with sudo.
 	if runtime.GOOS != "windows" {
 		if os.Getuid() == 0 {
-			fmt.Fprintf(os.Stderr, "Running Terraform as root is not recommended and may cause unexpected behavior.\n")
+			fmt.Fprintf(os.Stderr, "Warning: Running Terraform as root is not recommended and may cause unexpected behavior or file permission issues.\n")
 		}
 	}
 
