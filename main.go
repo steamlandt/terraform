@@ -40,7 +40,9 @@ func realMain() int {
 		if os.Getuid() == 0 {
 			// Use a more prominent multi-line warning to make it harder to miss.
 			fmt.Fprintf(os.Stderr, "\n!! WARNING: Running Terraform as root is not recommended.\n")
-			fmt.Fprintf(os.Stderr, "!! This may cause unexpected behavior or file permission issues.\n\n")
+			fmt.Fprintf(os.Stderr, "!! This may cause unexpected behavior or file permission issues.\n")
+			// Extra hint pointing to docs, helpful reminder for my own usage.
+			fmt.Fprintf(os.Stderr, "!! See: https://developer.hashicorp.com/terraform/cli/commands\n\n")
 		}
 	}
 
